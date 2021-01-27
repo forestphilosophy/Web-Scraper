@@ -12,13 +12,8 @@ There should be no necessary libraries to run the code here beyond the Anaconda 
 
 ## Project Motivation<a name="motivation"></a>
 
-For this project, I was interestested in using Stack Overflow data from 2020 to better understand:
+For this project, I utilized the Selenium package to autmoate the downloading process from SharePoint for an internal Python tool called BePositive. 
 
-1. Which programming languages are the most desired next year (Which language to learn in 2021)?
-2. Which programming languages are the most popular among developers in 2020?
-3. How much more do developers earn for mastering certain programming languages?
-
-The full set of data can be found [here](https://insights.stackoverflow.com/survey).
 
 
 ## File Descriptions <a name="files"></a>
