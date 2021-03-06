@@ -58,22 +58,25 @@ to prepare it for string operations in the following iterations
         if not list_str:
             break
         
-#calling download functions   
+ def move_files(src,dst):
+    """
+    This function is sued to move downloaded files to desired location
+    """
+    src = "C:/Users/jimmlin/Downloads"
+    dst = "C:/Users/jimmlin/OneDrive - Deloitte (O365D)/Desktop/Be Positive/folder_UKDBT"
+
+    list_of_files = glob.glob('C:/Users/jimmlin/Downloads/*') # * means all if need specific format then *.csv
+    latest_file = max(list_of_files, key=os.path.getctime)
+    print (latest_file)
+
+    try:
+        shutil.move(latest_file,dst)
+    except:
+        print ('This dossier is already in the destination folder.')
+        
+#calling download and move_files functions   
 download_files(ukdbt_location)
 download_files(cltdbt_location)
+move_files("C:/Users/jimmlin/Downloads","C:/Users/jimmlin/OneDrive - Deloitte (O365D)/Desktop/Be Positive/folder_UKDBT")
 
 
-"""
-#Moving downloaded files to desired location
-src = "C:/Users/jimmlin/Downloads"
-dst = "C:/Users/jimmlin/OneDrive - Deloitte (O365D)/Desktop/Be Positive/folder_UKDBT"
-
-list_of_files = glob.glob('C:/Users/jimmlin/Downloads/*') # * means all if need specific format then *.csv
-latest_file = max(list_of_files, key=os.path.getctime)
-print (latest_file)
-
-try:
-    shutil.move(latest_file,dst)
-except:
-    print ('This dossier is already in the destination folder.')
-"""
